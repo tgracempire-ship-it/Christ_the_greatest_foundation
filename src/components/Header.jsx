@@ -30,10 +30,11 @@ const Header = () => {
           <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
           <Link to="/#leadership" onClick={closeMenu}>Leadership</Link>
           <Link to="/#impact" onClick={closeMenu}>Impact Numbers</Link>
+          <Link to="/#get-involved" onClick={closeMenu} className="mobile-donate">Donate / Partner</Link>
         </nav>
 
         <div className="header-actions">
-          <Link to="/#get-involved" className="btn btn-primary btn-sm">
+          <Link to="/#get-involved" className="btn btn-primary btn-sm desktop-donate">
             <span className="long">Donate / Partner</span>
             <span className="short">Donate</span>
           </Link>
