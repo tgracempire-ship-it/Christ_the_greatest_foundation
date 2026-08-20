@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,24 +19,24 @@ const Header = () => {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`} id="siteHeader">
       <div className="container nav-row">
-        <a href="#top" className="brand" onClick={closeMenu}>
+        <Link to="/#top" className="brand" onClick={closeMenu}>
           <img src="/logo.png" alt="Christ the Greatest Foundation" className="brand-mark" style={{ borderRadius: '8px', objectFit: 'contain', backgroundColor: '#fff' }} />
           <span>Christ the Greatest<br/><small>Foundation • Iju, Ondo State</small></span>
-        </a>
+        </Link>
 
         <nav className={`primary-nav ${menuOpen ? 'open' : ''}`} id="primaryNav" aria-label="Primary">
-          <a href="#about" onClick={closeMenu}>About Foundation</a>
-          <a href="#programs" onClick={closeMenu}>Our Initiatives</a>
-          <a href="#gallery" onClick={closeMenu}>Gallery</a>
-          <a href="#leadership" onClick={closeMenu}>Leadership</a>
-          <a href="#impact" onClick={closeMenu}>Impact Numbers</a>
+          <Link to="/#about" onClick={closeMenu}>About Foundation</Link>
+          <Link to="/#programs" onClick={closeMenu}>Our Initiatives</Link>
+          <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+          <Link to="/#leadership" onClick={closeMenu}>Leadership</Link>
+          <Link to="/#impact" onClick={closeMenu}>Impact Numbers</Link>
         </nav>
 
         <div className="header-actions">
-          <a href="#get-involved" className="btn btn-primary btn-sm">
+          <Link to="/#get-involved" className="btn btn-primary btn-sm">
             <span className="long">Donate / Partner</span>
             <span className="short">Donate</span>
-          </a>
+          </Link>
           <button 
             className="menu-toggle" 
             id="menuToggle" 

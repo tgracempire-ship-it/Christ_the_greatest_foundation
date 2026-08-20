@@ -12,7 +12,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="gallery" id="gallery" style={{ padding: '0 0 96px 0', background: 'var(--white)' }}>
+    <section className="gallery" id="gallery" style={{ padding: '120px 0 96px 0', background: 'var(--white)', minHeight: '100vh' }}>
       <div className="container">
         <div className="section-head">
           <span className="eyebrow"><span className="dot"></span>In Action</span>
@@ -42,6 +42,7 @@ const Gallery = () => {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
+                  objectPosition: 'center top',
                   transition: 'transform 0.3s var(--ease)'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}

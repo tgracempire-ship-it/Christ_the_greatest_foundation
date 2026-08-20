@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,21 +23,21 @@ const Footer = () => {
           <div className="footer-col">
             <h6>Quick Links</h6>
             <ul>
-              <li><a href="#about">About Foundation</a></li>
-              <li><a href="#programs">Our Initiatives</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#leadership">Leadership</a></li>
-              <li><a href="#get-involved">Get Involved</a></li>
+              <li><Link to="/#about">About Foundation</Link></li>
+              <li><Link to="/#programs">Our Initiatives</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/#leadership">Leadership</Link></li>
+              <li><Link to="/#get-involved">Get Involved</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h6>Programs</h6>
             <ul>
-              <li><a href="#programs">Free Primary School</a></li>
-              <li><a href="#programs">Uniform Outreach</a></li>
-              <li><a href="#programs">Prison Ministry</a></li>
-              <li><a href="#programs">Leadership Training</a></li>
+              <li><Link to="/#programs">Free Primary School</Link></li>
+              <li><Link to="/#programs">Uniform Outreach</Link></li>
+              <li><Link to="/#programs">Prison Ministry</Link></li>
+              <li><Link to="/#programs">Leadership Training</Link></li>
             </ul>
           </div>
 
