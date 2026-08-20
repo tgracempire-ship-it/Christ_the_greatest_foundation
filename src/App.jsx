@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Gallery from './components/Gallery';
 
 const ScrollToAnchor = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -20,7 +20,28 @@ const ScrollToAnchor = () => {
     } else {
       window.scrollTo(0, 0);
     }
-  }, [hash]);
+  }, [hash, pathname]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    setTimeout(() => {
+      const elements = document.querySelectorAll('.reveal');
+      elements.forEach((el) => observer.observe(el));
+    }, 100);
+
+    return () => observer.disconnect();
+  }, [pathname]);
 
   return null;
 };
