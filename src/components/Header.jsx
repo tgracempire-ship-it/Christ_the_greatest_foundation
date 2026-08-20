@@ -24,6 +24,7 @@ const Header = () => {
           <span>Christ the Greatest<br/><small>Foundation • Iju, Ondo State</small></span>
         </Link>
 
+        {menuOpen && <div className="nav-backdrop" onClick={closeMenu} aria-hidden="true"></div>}
         <nav className={`primary-nav ${menuOpen ? 'open' : ''}`} id="primaryNav" aria-label="Primary">
           <Link to="/#about" onClick={closeMenu}>About Foundation</Link>
           <Link to="/#programs" onClick={closeMenu}>Our Initiatives</Link>
@@ -39,7 +40,7 @@ const Header = () => {
             <span className="short">Donate</span>
           </Link>
           <button 
-            className="menu-toggle" 
+            className={`menu-toggle ${menuOpen ? 'open' : ''}`}
             id="menuToggle" 
             aria-label="Toggle menu" 
             aria-expanded={menuOpen} 
