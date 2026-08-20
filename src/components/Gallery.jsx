@@ -22,7 +22,7 @@ const Gallery = () => {
 
         <div className="gallery-grid" style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
           gap: '24px',
           marginTop: '40px'
         }}>
